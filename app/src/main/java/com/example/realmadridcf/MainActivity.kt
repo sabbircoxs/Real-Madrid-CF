@@ -7,7 +7,9 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.realmadridcf.adapter.PlayerAdapter
 import com.example.realmadridcf.databinding.ActivityMainBinding
 import com.example.realmadridcf.databinding.AddPlayerBinding
@@ -32,7 +34,8 @@ class MainActivity : AppCompatActivity() {
                 7,
                 "€100 million",
                 R.drawable.ronaldo,
-                "Cristiano Ronaldo is a Portuguese professional footballer who plays as a forward for Premier League club Manchester United and captains the Portugal national team."
+                "Cristiano Ronaldo is a Portuguese professional footballer who plays as " +
+                        "a forward for Premier League club Manchester United and captains the Portugal national team."
             )
         )
         player.add(
@@ -41,7 +44,8 @@ class MainActivity : AppCompatActivity() {
                 9,
                 "€100 million",
                 R.drawable.mbappe9,
-                "K. Mbappé is a French professional footballer who plays as a forward for Ligue 1 club Paris Saint-Germain"
+                "K. Mbappé is a French professional footballer who plays " +
+                        "as a forward for Ligue 1 club Paris Saint-Germain"
             )
         )
         player.add(
@@ -50,7 +54,8 @@ class MainActivity : AppCompatActivity() {
                 4,
                 "€100 million",
                 R.drawable.alaba4,
-                "Alaba is a German professional footballer who plays as a midfielder for Premier League club Liverpool"
+                "Alaba is a German professional footballer who plays " +
+                        "as a midfielder for Premier League club Liverpool"
             )
         )
         player.add(
@@ -59,7 +64,8 @@ class MainActivity : AppCompatActivity() {
                 5,
                 "€100 million",
                 R.drawable.ballingham5,
-                "Ballingham is a British professional footballer who plays as a midfielder for Premier League club Liverpool"
+                "Ballingham is a British professional footballer who plays " +
+                        "as a midfielder for Premier League club Liverpool"
             )
         )
         player.add(
@@ -68,7 +74,8 @@ class MainActivity : AppCompatActivity() {
                 6,
                 "€100 million",
                 R.drawable.camavinga6,
-                "Camavinga is a French professional footballer who plays as a midfielder for Ligue 1 club Paris Saint-Germain"
+                "Camavinga is a French professional footballer who plays " +
+                        "as a midfielder for Ligue 1 club Paris Saint-Germain"
             )
         )
         player.add(
@@ -77,7 +84,8 @@ class MainActivity : AppCompatActivity() {
                 16,
                 "€100 million",
                 R.drawable.endrick16,
-                "Endrick is a French professional footballer who plays as a midfielder for Ligue 1 club Paris Saint-Germain"
+                "Endrick is a French professional footballer who plays " +
+                        "as a midfielder for Ligue 1 club Paris Saint-Germain"
             )
         )
         player.add(
@@ -86,7 +94,8 @@ class MainActivity : AppCompatActivity() {
                 11,
                 "€100 million",
                 R.drawable.rodrigo11,
-                "Rodrigo is a Spanish professional footballer who plays as a midfielder for Ligue 1 club Paris Saint-Germain"
+                "Rodrigo is a Spanish professional footballer who plays " +
+                        "as a midfielder for Ligue 1 club Paris Saint-Germain"
             )
         )
         player.add(
@@ -95,7 +104,8 @@ class MainActivity : AppCompatActivity() {
                 7,
                 "€100 million",
                 R.drawable.vinijr7,
-                "Vini Jr is a Brazilian professional footballer who plays as a midfielder for Ligue 1 club Paris Saint-Germain"
+                "Vini Jr is a Brazilian professional footballer who plays " +
+                        "as a midfielder for Ligue 1 club Paris Saint-Germain"
             )
         )
         player.add(
@@ -104,7 +114,8 @@ class MainActivity : AppCompatActivity() {
                 15,
                 "€100 million",
                 R.drawable.ardaguler15,
-                "Arda Guler is a Turkish professional footballer who plays as a midfielder for Premier League club Liverpool"
+                "Arda Guler is a Turkish professional footballer who plays " +
+                        "as a midfielder for Premier League club Liverpool"
             )
         )
         player.add(
@@ -113,7 +124,8 @@ class MainActivity : AppCompatActivity() {
                 14,
                 "€100 million",
                 R.drawable.tchouamen14,
-                "Tchouamen is a French professional footballer who plays as a midfielder for Ligue 1 club Paris Saint-Germain"
+                "Tchouamen is a French professional footballer who plays " +
+                        "as a midfielder for Ligue 1 club Paris Saint-Germain"
             )
         )
         player.add(
@@ -122,7 +134,8 @@ class MainActivity : AppCompatActivity() {
                 10,
                 "€100 million",
                 R.drawable.modric10,
-                "Modric is a Croatian professional footballer who plays as a midfielder for Premier League club Liverpool"
+                "Modric is a Croatian professional footballer who plays " +
+                        "as a midfielder for Premier League club Liverpool"
             )
         )
         player.add(
@@ -131,7 +144,8 @@ class MainActivity : AppCompatActivity() {
                 8,
                 "€100 million",
                 R.drawable.valvarda8,
-                "Valvarda is a Croatian professional footballer who plays as a midfielder for Premier League club Liverpool"
+                "Valvarda is a Croatian professional footballer who plays " +
+                        "as a midfielder for Premier League club Liverpool"
             )
         )
         player.add(
@@ -140,7 +154,8 @@ class MainActivity : AppCompatActivity() {
                 22,
                 "€100 million",
                 R.drawable.rudiger22,
-                "Rudiger is a German professional footballer who plays as a midfielder for Premier League club Liverpool"
+                "Rudiger is a German professional footballer who plays " +
+                        "as a midfielder for Premier League club Liverpool"
             )
         )
         player.add(
@@ -149,7 +164,8 @@ class MainActivity : AppCompatActivity() {
                 17,
                 "€100 million",
                 R.drawable.lucas17,
-                "Lucas is a French professional footballer who plays as a midfielder for Ligue 1 club Paris Saint-Germain"
+                "Lucas is a French professional footballer who plays " +
+                        "as a midfielder for Ligue 1 club Paris Saint-Germain"
             )
         )
         player.add(
@@ -158,7 +174,8 @@ class MainActivity : AppCompatActivity() {
                 3,
                 "€100 million",
                 R.drawable.militao3,
-                "Militao is a Brazilian professional footballer who plays as a midfielder for Ligue 1 club Paris Saint-Germain"
+                "Militao is a Brazilian professional footballer who plays " +
+                        "as a midfielder for Ligue 1 club Paris Saint-Germain"
             )
         )
         player.add(
@@ -167,7 +184,8 @@ class MainActivity : AppCompatActivity() {
                 2,
                 "€100 million",
                 R.drawable.carvagal2,
-                "Carvagal is a French professional footballer who plays as a midfielder for Ligue 1 club Paris Saint-Germain"
+                "Carvagal is a French professional footballer who plays " +
+                        "as a midfielder for Ligue 1 club Paris Saint-Germain"
             )
         )
         player.add(
@@ -176,7 +194,8 @@ class MainActivity : AppCompatActivity() {
                 1,
                 "€100 million",
                 R.drawable.courtois1,
-                "Courtois is a Belgian professional footballer who plays as a goal keeper for Ligue 1 club Paris Saint-Germain"
+                "Courtois is a Belgian professional footballer who plays " +
+                        "as a goal keeper for Ligue 1 club Paris Saint-Germain"
             )
         )
         player.add(
@@ -185,7 +204,8 @@ class MainActivity : AppCompatActivity() {
                 13,
                 "€100 million",
                 R.drawable.lunin13,
-                "Lunin is a Russian professional footballer who plays as a midfielder for Premier League club Liverpool"
+                "Lunin is a Russian professional footballer who plays " +
+                        "as a midfielder for Premier League club Liverpool"
             )
         )
 
@@ -205,6 +225,27 @@ class MainActivity : AppCompatActivity() {
         binding.addBtn.setOnClickListener {
             showFruitAddDialog()
         }
+
+        val itemTouchHelper = ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(
+            0,
+            ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT
+        ) {
+            override fun onMove(
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+                target: RecyclerView.ViewHolder
+            ): Boolean {
+                return false
+            }
+
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                player.removeAt(viewHolder.adapterPosition)
+                playerAdapter.notifyItemRemoved(viewHolder.adapterPosition)
+            }
+        })
+
+        itemTouchHelper.attachToRecyclerView(binding.allPlayer)
+
 
 
     }
@@ -229,4 +270,5 @@ class MainActivity : AppCompatActivity() {
             .setNegativeButton("Cancel", null)
             .show()
     }
+
 }
